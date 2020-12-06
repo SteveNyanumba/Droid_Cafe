@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">MatDes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_desert_recipe_fragment">Hello Desert Recipe Fragment</string>
+    <string name="hello_pastries_recipe_fragment">Hello Pastries Recipe Fragment</string>
+    <string name="tab_label_1">Desserts</string>
+    <string name="tab_label_2">Pastries</string>
+    <string name="tab_label_3">Stores</string>
+    <string name="desert_recipes">Desert Recipes</string>
+    <string name="browse_recipes">Browse Recipes</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="prep_amp_cook_time_2hrs"><![CDATA[Prep & Cook Time: 2hrs]]></string>
+
+    <array name="desserts_images">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+        <item>@drawable/image_4</item>
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+        <item>@drawable/image_4</item>
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+    </array>
+    <string-array name="dessert_title">
+        <item>Chicken</item>
+        <item>Fish</item>
+        <item>Burger</item>
+        <item>Steak</item>
+        <item>Chicken</item>
+        <item>Fish</item>
+        <item>Burger</item>
+        <item>Steak</item>
+        <item>Chicken</item>
+        <item>Fish</item>
+    </string-array>
+
+    <string-array name="dessert_description">
+        <item>Chicken is grilled in beautiful spice vegetables</item>
+        <item>Fish is steamed and served with lemon and tarter sauce </item>
+        <item>Just a boring looking burger but one bite sends you to heaven on a one-way express trip</item>
+        <item>Steak is grilled medium-rare and enjoyed with very well fried asparagus and spiced well with pepper and barbecue sauce </item>
+        <item>Chicken is grilled in beautiful spice vegetables</item>
+        <item>Fish is steamed and served with lemon and tarter sauce </item>
+        <item>Just a boring looking burger but one bite sends you to heaven on a one-way express trip</item>
+        <item>Steak is grilled medium-rare and enjoyed with very well fried asparagus and spiced well with pepper and barbecue sauce </item>
+        <item>Chicken is grilled in beautiful spice vegetables</item>
+        <item>Fish is steamed and served with lemon and tarter sauce </item>
+    </string-array>
+</resources>
