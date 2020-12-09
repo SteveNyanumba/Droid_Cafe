@@ -16,7 +16,10 @@
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:logo="@mipmap/my_app_logo_round"
-        app:titleTextAppearance="@style/app_title"/>
+        app:titleMarginStart="45dp"
+        android:paddingVertical="10dp"
+        app:titleTextAppearance="@style/app_title"
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"

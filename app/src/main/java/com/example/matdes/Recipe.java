@@ -2,8 +2,8 @@ package com.example.matdes;
 
 public class Recipe {
     private final int recipeImage;
-    private String recipeTitle;
-    private String recipeDescription;
+    private final String recipeTitle;
+    private final String recipeDescription;
 
     Recipe(int recipeImage, String recipeTitle, String recipeDescription){
         this.recipeImage = recipeImage;

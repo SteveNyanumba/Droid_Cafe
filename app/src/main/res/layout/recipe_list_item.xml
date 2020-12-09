@@ -7,7 +7,9 @@
     android:layout_margin="8dp">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="13dp"
+        >
         <ImageView
             android:id="@+id/recipe_image"
             android:layout_width="match_parent"
@@ -44,7 +46,7 @@
             app:drawableStartCompat="@drawable/prep_time"
             android:drawableStart="@drawable/prep_time" />
 
-        <view
+        <View
             android:layout_width="match_parent"
             android:id="@+id/divider"
             android:layout_height="1dp"

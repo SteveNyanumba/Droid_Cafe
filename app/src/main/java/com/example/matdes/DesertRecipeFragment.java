@@ -24,9 +24,25 @@ public class DesertRecipeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    private void initializeData() {
+        String[] dessertTitles = getResources().getStringArray(R.array.dessert_title);
+        String[] dessertDescriptions = getResources().getStringArray(R.array.dessert_description);
+        TypedArray dessertImages = getResources().obtainTypedArray(R.array.desserts_images);
+        dessertRecipeData.clear();
+
+//        dessertRecipeData.add(1,new Recipe(dessertImages.getResourceId(1,0),dessertTitles[1],dessertDescriptions[1]));
+        for (int i=0; i<dessertTitles.length;i++){
+            dessertRecipeData.add(i, new Recipe(dessertImages.getResourceId(i,0),dessertTitles[i],dessertDescriptions[i]));
+        }
+
+//
+        dessertImages.recycle();
+        dessertAdapter.notifyDataSetChanged();
+    }
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_desert_recipe, container, false);
 
@@ -37,23 +53,8 @@ public class DesertRecipeFragment extends Fragment {
         dessertRecyclerView.setAdapter(dessertAdapter);
         initializeData();
 
-
         return rootView;
     }
 
-    private void initializeData() {
-        String[] dessertTitles = getResources().getStringArray(R.array.dessert_title);
-        String[] dessertDescriptions = getResources().getStringArray(R.array.dessert_description);
-        TypedArray dessertImages = getResources().obtainTypedArray(R.array.desserts_images);
-        dessertRecipeData.clear();
 
-        for (int i = 0; i < dessertTitles.length; i++){
-            dessertRecipeData.add(new Recipe(dessertImages.getResourceId(i,0), dessertTitles[i],dessertDescriptions[i]));
-        }
-
-        dessertImages.recycle();
-        dessertAdapter.notifyDataSetChanged();
-
-
-    }
 }
