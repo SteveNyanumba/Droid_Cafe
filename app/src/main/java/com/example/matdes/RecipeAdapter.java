@@ -1,11 +1,13 @@
 package com.example.matdes;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,7 +54,24 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             myRecipeImage = itemView.findViewById(R.id.recipe_image);
             myRecipeTitle = itemView.findViewById(R.id.recipe_title);
             myRecipeDescription = itemView.findViewById(R.id.recipe_description);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int dessertPosition = getAdapterPosition();
+                    Recipe currentDessert = recipeData.get(dessertPosition);
+                    if(dessertPosition == 0){
+                        Intent donutIntent = new Intent(myContext, DonutActivity.class);
+                        donutIntent.putExtra("dTitle", currentDessert.getRecipeTitle());
+                        donutIntent.putExtra("dImage", currentDessert.getRecipeImage());
+                        donutIntent.putExtra("dDescription", currentDessert.getRecipeDescription());
 
+                        myContext.startActivity(donutIntent);
+                    }else{
+                        Toast.makeText(myContext, "Create an activity for the Dessert", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+            });
         }
 
         public void bindTo(Recipe currentRecipe) {
